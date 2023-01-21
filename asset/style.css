@@ -1,0 +1,327 @@
+/* Reset and Common css code start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+.none{
+    display: none;
+}
+:root{
+    --primary-color: rgb(1 156 156)  ;
+    --secondery-color: rgb(1 223 189) ;
+    --worning-color : rgb(114 17 17) ; 
+    --font-family: 'Poppins', sans-serif ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    outline: none ;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+html{
+    scroll-behavior: smooth ;
+}
+body{
+    background-color: white ;
+    line-height: 22px ;
+    color: rgba(0, 0, 0, 0.87) ;
+}
+img{
+    max-width: 100%;
+    height: auto ; 
+}
+/* Reset and Common css code end  */
+
+/* CSS for  all Pages Start */
+.container{
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    box-shadow: 0px 0px 18px #00000052;
+}
+.container::-webkit-scrollbar{
+    width: 0;
+}
+.active{
+    opacity: 1 !important ;
+    z-index: 9 !important;
+    /* pointer-events:pointer !important   ; */
+    /* transform: translate(-50%, -50%) scale(1); */
+}
+.quizBody{
+    padding: 10px 15px 20px 15px  ;
+}
+.btn {
+    display: flex;
+    justify-content: space-between ;
+    padding: 20px ;
+    align-items: center ;
+    /* pointer-events: pointer ; */
+    /* z-index: 99 !important ; */
+}
+.startBtn, .endBtn{
+    padding: 15px 30px  ;
+    font-size: 15px ;
+    font-weight: bold ; 
+    background-color: var(--primary-color );
+    color: white ;
+    border: none ;
+    cursor: pointer;
+    border-radius: 20px ;
+    /* pointer-events: pointer !important ; */
+    /* z-index: 99 !important ; */
+}
+.startBtn:hover, .endBtn:hover{
+    background-color: var(--secondery-color );
+}
+/* CSS for  all Pages End */
+
+/* First Page css start  */
+.firstPage{
+    opacity: 0 ;
+    /* pointer-events: none ; */
+    position: absolute;
+    top: 0;
+}
+.firstPage img{
+    position: sticky ;
+    top: 0 ;
+}
+.firstPage p{
+    margin: 5px 0 ;
+}
+.firstPage h4{
+    margin-top: 10px  ;
+}
+.fkrl{
+    color: blue;
+    cursor: pointer;
+}
+/* First Page css end  */
+
+/* Rules page css start */
+.rulesPage{
+    opacity: 0 ;
+    /* pointer-events: none ; */
+    position: absolute ;
+    top: 0;
+}
+.rulesPage h3{
+    padding: 25px 0 20px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+    position: sticky;
+    top: 0 ;
+    background-color: white ;
+}
+.rulesPage ol{
+    padding: 10px 20px ;
+}
+.rulesPage ol li{
+    padding: 10px 30px ;
+    line-height: 40px ;
+}
+.totalQueS{
+    color : blue ;
+}
+.examT{
+    color: blue ;
+}
+.exitQ:hover{
+    background-color : var(--worning-color)
+}
+/* Rules page css end */
+
+
+/* Quiz Page css start  */
+.quizPage{
+    opacity: 0 ;
+    /* pointer-events: none ; */
+    position: absolute;
+    top: 0 ;
+    width: 100% ; 
+}
+.quizPage .examTime{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 30px 20px 20px  ;
+    border-bottom: 1.6px solid rgba(0, 0, 0, 0.432) ;
+    font-weight: 700;
+    position: sticky ; 
+    top: 0 ;
+    background-color: white ;
+}
+.examTime .blockB {
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+    padding: 5px 0 5px 5px;
+    overflow: hidden;
+    color: var(--primary-color);
+}
+
+.examTime .Timer {
+    background: var(--primary-color);
+    padding: 14px;
+    color: white;
+    margin-right: -3px;
+}
+.questions{
+    font-size: 20px ;
+    font-weight: 600;
+    padding:20px 0 ;
+    pointer-events: none ;
+}
+.questions span{
+    line-height: 28px ;
+}
+.option{
+    padding: 20px 25px 20px 17px ;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px ;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 15px 0;
+    transition: ease-in .1s ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.true{
+    background-color: rgb(9 203 95 / 31%) !important ;
+}
+.false{
+    background-color: rgb(255 0 0 / 26%) !important;
+}
+.disabled{
+    pointer-events: none ;
+}
+.allOptions .option:hover{
+    background-color: rgba(1, 156, 156, 0.158) ;
+}
+.nextQ{
+    display: none ;
+}
+/* Quiz Page css end */
+
+
+
+/* Result page css start  */
+.resultPage{
+    opacity: 0 ;
+    /* pointer-events: none ; */
+    position: absolute;
+    top: 0 ;
+    width: 100%;
+}
+.resultPage img{
+    position: sticky;
+    top:  0  ;
+    width: 100%;
+}
+.resultPage .result{
+    margin-top: 60px ;
+    margin-bottom: 20px ;
+    line-height: 30px ;
+    text-align: center ;
+}
+.quitQ:hover{
+    background-color: var(--worning-color) ;
+}
+/* Result page css end  */
+
+/* Developer informations page's css */
+
+.DeveloperInfo{
+    text-align: center ;
+    align-items: center;
+    opacity: 0 ;
+    position: absolute;
+    top: 0 ;
+    width: 100%;
+    transform:scale(0) !important ;
+    transform-origin: center !important; 
+    transition: all .3s ;
+}
+.exitP{
+    position: absolute ; 
+    top: 50px;
+    right: 50px ;
+    border: 1px solid var(--primary-color);
+    padding: 10px 17px ;
+    color: var(--worning-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.exitP:hover{
+    background-color: var(--worning-color);
+    color: white ;
+    border-color: transparent ;
+}
+.DeveloperInfo img{
+    width: 50%;
+    border-radius: 100%;
+    margin:100px auto 20px;
+    border: 10px solid var(--primary-color)  ;
+    cursor:not-allowed;
+}
+.DeveloperInfo h1{
+    text-align: center ;
+    cursor: pointer;
+}
+.socialLink{
+    /* border: 1px solid red ; */
+    width: 50%;
+    margin: auto ;
+    margin-top: 10px ;
+}
+.socialLink a{
+    color: black ;
+}
+.linkDiv{
+    display: flex;
+    justify-content: baseline;
+    align-items: center ;
+    border: 1px solid var(--primary-color);
+    border-bottom: 4px solid var(--primary-color) ;
+    margin-top: 5px ;
+    cursor: pointer; 
+}
+.linkDiv .icn{
+    font-size: 20px ;
+    padding: 2px 7px 2px 3px ;
+}
+.linkDiv:hover {
+    /* border: 1px solid var(--secondery-color); */
+    border-bottom: 4px solid var(--secondery-color) ;
+}
+
+.backP{
+    margin-top: 40px;
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px ;
+    cursor: pointer;
+    color: var(--worning-color);
+    margin-bottom: 70px ;
+}
+.backP:hover{
+    background-color: var(--worning-color);
+    color: white ;
+    border-color: transparent ;
+}
+
+
+
+.showInfo{
+    opacity: 1 !important ;
+    z-index: 9 !important;
+    transform:scale(1) !important ;
+}
+
