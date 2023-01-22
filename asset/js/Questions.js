@@ -145,7 +145,7 @@ let Questions = [
       {
         numb: 14 ,
         question: `What is the past tense of the verb "to be"?`,
-        answer: "",
+        answer: "were",
         options: [
           "am",
           "is",
